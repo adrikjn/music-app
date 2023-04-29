@@ -29,6 +29,10 @@
             $result = $pdo->prepare($request);
             $result->execute($data);
         }
+        $_SESSION['messages']['success'][''][] = 'The song has been added';
+
+        // ! header('Location: ')
+        exit();
     }
 
 ?>
@@ -40,25 +44,25 @@
     <form method="post" class="p-3 text-center">
         <div class="form-group p-1">
             <label for="artist" class="form-label">Artist name :</label>
-            <input type="text" class="form-control" id="artist" aria-describedby="text" placeholder="The name of the artist" name="artist">
+            <input type="text" class="form-control" id="artist" aria-describedby="text" placeholder="The name of the artist" name="artist" value="">
         </div>
         <hr>
         <div class="form-group p-1">
             <label for="image" class="form-label">Upload artist image :</label>
-            <input type="file" class="form-control" id="image" name="image">
+            <input type="file" class="form-control" id="image" name="image" value="">
         </div>
         <hr>
 
         <div class="form-group p-1">
             <label for="song" class="form-label">Song name :</label>
-            <input type="text" class="form-control" id="song" aria-describedby="text" placeholder="The name of the song" name="song">
+            <input type="text" class="form-control" id="song" aria-describedby="text" placeholder="The name of the song" name="song" value="">
         </div>
         <hr>
 
         <div class="form-group p-1">
             <label for="genre" class="form-label">Genre of music :</label>
             <select class="form-select" name="genre" id="genre">
-                <option class="text-center">---Select a genre---</option>
+                <option class="text-center" value="">---Select a genre---</option>
                 <option value="Rock">Rock</option>
                 <option value="Pop">Pop</option>
                 <option value="Hip-Hop">Hip-Hop</option>
@@ -84,7 +88,7 @@
         <hr>
         <div class="form-group p-1">
             <label for="lyrics" class="form-label">Lyrics :</label>
-            <textarea class="form-control" id="lyrics" name="lyrics" rows="6" placeholder="Enter the lyrics of the song" style="resize:none;"></textarea>
+            <textarea class="form-control" id="lyrics" name="lyrics" rows="6" placeholder="Enter the lyrics of the song" style="resize:none;" value=""></textarea>
         </div>
         <hr>
 
