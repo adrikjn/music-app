@@ -20,13 +20,13 @@
             <div class="navbar-collapse collapse" id="navbarColor01">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Latest songs
+                        <a class="nav-link active" href="<?= BASE; ?>">Latest songs
                             <!-- Selectionner seulement 3 WHERE la date DESC LIMIT 3 -->
                             <span class="visually-hidden">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Catalogue</a>
+                        <a class="nav-link" href="../public/catalogue.php">Catalogue</a>
                         <!-- Step 1 : apparaitre la liste ici -->
                     </li>
                     <li class="nav-item">
@@ -44,6 +44,14 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Subscribe</a>
                             <!-- redirection subscribe generer php -->
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Add a Song</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Manipulate the Songs</a>
                         </div>
                     </li>
                 </ul>
