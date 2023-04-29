@@ -24,6 +24,7 @@
         <div class="form-group p-1">
             <label for="genre" class="form-label">Genre of music :</label>
             <select class="form-select" name="genre" id="genre">
+                <option class="text-center">---Select a genre---</option>
                 <option value="Rock">Rock</option>
                 <option value="Pop">Pop</option>
                 <option value="Hip-Hop">Hip-Hop</option>
@@ -53,17 +54,10 @@
         </div>
         <hr>
 
-        <button type="submit" class="btn btn-primary text-center">Submit</button>
+        <button type="submit" class="btn btn-primary my-3 text-center">Add a Song</button>
 
     </form>
 </div>
-
-
-
-
-
-
-
 
 
 <?php require_once('../include/footer.php'); ?>
