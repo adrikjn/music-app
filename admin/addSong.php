@@ -18,7 +18,7 @@
             $error['lyrics'] = 'Lyrics is required';
         }
         if(!$error){
-            $request = "INSERT INTO artist (artist, image, song, genre, lyrics) VALUES(:artist, :image, :song, :genre, :lyrics)";
+            $request = "INSERT INTO artist (artist, image, song, genre,date, lyrics) VALUES(:artist, :image, :song, :genre, NOW(), :lyrics)";
             $data = [
                 ':artist' => $_POST['artist'],
                 ':image' => $_POST['image'],
