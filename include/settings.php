@@ -12,7 +12,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=crud_alone',
     )
 );
 
-define('BASE', '/CRUD-ALONE/');
+define('BASE', '/crud_alone/');
 
 
 function debug($var){

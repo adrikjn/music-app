@@ -26,7 +26,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../public/catalogue.php">Catalogue</a>
+                        <a class="nav-link" href="">Catalogue</a>
                         <!-- Step 1 : apparaitre la liste ici -->
                     </li>
                     <li class="nav-item">
@@ -49,7 +49,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Add a Song</a>
+                            <a class="dropdown-item" href="<?= BASE . "admin/addSong.php"; ?>">Add a Song</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Manipulate the Songs</a>
                         </div>
