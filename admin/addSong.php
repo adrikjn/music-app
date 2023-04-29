@@ -1,4 +1,38 @@
 <?php require_once('../include/header.php'); ?>
+<?php 
+    if(!empty($_POST)){
+        $error = [];
+        if(empty($_POST['artist'])){
+            $error['artist'] = 'Artist name is required';
+        }
+        if(empty($_POST['image'])){
+            $error['image'] = 'Artist image is required';
+        }
+        if(empty($_POST['song'])){
+            $error['song'] = 'Song name is required';
+        }
+        if(empty($_POST['genre'])){
+            $error['genre'] = 'Music genre is required';
+        }
+        if(empty($_POST['lyrics'])){
+            $error['lyrics'] = 'Lyrics is required';
+        }
+        if(!$error){
+            $request = "INSERT INTO artist (artist, image, song, genre, lyrics) VALUES(:artist, :image, :song, :genre, :lyrics)";
+            $data = [
+                ':artist' => $_POST['artist'],
+                ':image' => $_POST['image'],
+                ':song' => $_POST['song'],
+                ':genre' => $_POST['genre'],
+                ':lyrics' => $_POST['lyrics']
+            ];
+            $result = $pdo->prepare($request);
+            $result->execute($data);
+        }
+    }
+
+?>
+
 
 <h1 class="my-5 text-center">Add a song</h1>
 

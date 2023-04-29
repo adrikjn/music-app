@@ -3,7 +3,7 @@
 session_start();
 
 
-$pdo = new PDO('mysql:host=localhost;dbname=crud_alone',
+$pdo = new PDO('mysql:host=localhost;dbname=crud-alone',
     'root',
     '',
     array(
