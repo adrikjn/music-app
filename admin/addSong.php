@@ -29,8 +29,8 @@
             $result = $pdo->prepare($request);
             $result->execute($data);
 
-            $_SESSION['messages']['success'][''][] = 'The song has been added';
-            header('Location: manipulateSongs.php');
+            $_SESSION['messages']['success'][] = 'The song has been added';
+            header('Location: adminSongs.php');
             exit();
         }
     }

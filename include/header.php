@@ -63,6 +63,28 @@
             </div>
         </div>
     </nav>
+
+    <div class="container mt-3">
+  <?php 
+    if(isset($_SESSION['messages']))
+    {
+      foreach($_SESSION['messages'] as $type => $messages)
+      {
+        foreach($messages as $message)
+        {
+        ?>
+          <div class="w-50 text-center mx-auto alert alert-<?= $type; ?>"><?= $message; ?></div>
+
+        <?php  
+        }
+      }
+      unset($_SESSION['messages']);
+    }
+
+  ?>
+
+
+</div>
 </body>
 
 </html>
