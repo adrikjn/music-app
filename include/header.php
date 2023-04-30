@@ -34,9 +34,9 @@
                         <a class="nav-link" href="#">Subscribe</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">informations</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">FAQ</a>
+                            <a class="dropdown-item" href="<?= BASE . "public/blog.php"; ?>">Blog</a>
                             <!-- voir exo blog -->
                             <a class="dropdown-item" href="#">Contact</a>
                             <!-- FOrmulaire de contact -->
