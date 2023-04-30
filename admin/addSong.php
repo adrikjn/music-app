@@ -30,7 +30,7 @@
             $result->execute($data);
 
             $_SESSION['messages']['success'][''][] = 'The song has been added';
-            header('Location: ../index.php');
+            header('Location: manipulateSongs.php');
             exit();
         }
     }

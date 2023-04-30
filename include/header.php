@@ -26,7 +26,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Catalogue</a>
+                        <a class="nav-link" href="<?= BASE . 'public/catalogue.php'; ?>">Catalogue</a>
                         <!-- Step 1 : apparaitre la liste ici -->
                     </li>
                     <li class="nav-item">
