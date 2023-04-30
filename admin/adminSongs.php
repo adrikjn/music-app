@@ -35,7 +35,7 @@ $artist = $resultat->fetchAll(PDO::FETCH_ASSOC);
                     <td><?= $a['lyrics']; ?></td>
                     <td>
                         <a href=""><i class="fa-solid fa-eye text-info"></i></a>
-                        <a href=""><i class="fa-solid fa-pen-to-square text-success"></i></a>
+                        <a href="editSong.php?id=<?= $a['id_artist']; ?>"><i class="fa-solid fa-pen-to-square text-success"></i></a>
                         <a href=""><i class="fa-solid fa-trash text-danger"></i></a>
                     </td>
                 </tr>
