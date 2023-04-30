@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/lux/bootstrap.min.css" integrity="sha512-+TCHrZDlJaieLxYGAxpR5QgMae/jFXNkrc6sxxYsIVuo/28nknKtf9Qv+J2PqqPXj0vtZo9AKW/SMWXe8i/o6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Musico</title>
 </head>
@@ -51,7 +52,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="<?= BASE . "admin/addSong.php"; ?>">Add a Song</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Manipulate the Songs</a>
+                            <a class="dropdown-item" href="<?= BASE . "admin/adminSongs.php"; ?>">Database Action</a>
                         </div>
                     </li>
                 </ul>
