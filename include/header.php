@@ -73,7 +73,7 @@
         foreach($messages as $message)
         {
         ?>
-          <div class="w-50 text-center mx-auto alert alert-<?= $type; ?>"><?= $message; ?></div>
+          <div class="w-50 text-center mx-auto rounded alert alert-<?= $type; ?>"><?= $message; ?></div>
 
         <?php  
         }
