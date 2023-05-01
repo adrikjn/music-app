@@ -1,6 +1,5 @@
 <?php require_once('../include/header.php'); ?>
 <?php
-
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $request = "SELECT * FROM artist WHERE id_artist = :id_artist";
@@ -30,11 +29,4 @@ if (isset($_GET['id'])) {
     </div>
     <?php endforeach; ?>
 </div>
-
-
-
-
-
-
-
 <?php require_once('../include/footer.php'); ?>

@@ -1,17 +1,11 @@
 <?php require_once('../include/header.php'); ?>
-
 <?php
 $request = 'SELECT * FROM contact';
 $resultat = $pdo->prepare($request);
 $resultat->execute();
 
 $messages = $resultat->fetchAll(PDO::FETCH_ASSOC);
-
-
-
 ?>
-
-
 <h1 class="text-center my-5">Processing Messages</h1>
 
 <div class="container">

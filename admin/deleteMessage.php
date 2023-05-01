@@ -1,6 +1,5 @@
 <?php 
 require_once('../include/settings.php');
-
 if(isset($_GET['id'])){
     $request = "DELETE FROM contact WHERE id_contact = :id_contact";
     $resultat = $pdo->prepare($request);
@@ -10,6 +9,5 @@ if(isset($_GET['id'])){
     header('Location: adminContact.php');
     exit();
 }
-
 ?>
 

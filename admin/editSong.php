@@ -1,8 +1,6 @@
 <?php require_once('../include/header.php'); ?>
-
 <?php
 // ! Pas compris la partie ou l'on crée :  $id = $_GET['id'];  $artist = $_POST; 'id_artist' => $artist['id_artist'] <input type="hidden" name="id_artist" value="<?= $id ?? ""; 
-
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $request = "SELECT * FROM artist WHERE id_artist = :id_artist";
@@ -39,8 +37,6 @@ if (!empty($_POST)) {
         exit();
     }
 }
-
-
 ?>
 
 <h1 class="text-center my-5">Edit informations from the songs</h1>

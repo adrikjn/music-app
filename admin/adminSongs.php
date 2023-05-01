@@ -1,13 +1,11 @@
 <?php require_once('../include/header.php'); ?>
 <?php
-
 $request = "SELECT * FROM artist";
 $resultat = $pdo->prepare($request);
 $resultat->execute();
 
 $artist = $resultat->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
 <h1 class="text-center my-5">Database Songs Management</h1>
 <div class="container">
     <table class="table table-hover">
