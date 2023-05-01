@@ -53,6 +53,8 @@
                             <a class="dropdown-item" href="<?= BASE . "admin/addSong.php"; ?>">Add a Song</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="<?= BASE . "admin/adminSongs.php"; ?>">Database Action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?= BASE . "admin/adminContact.php"; ?>">Customer Services</a>
                         </div>
                     </li>
                 </ul>
