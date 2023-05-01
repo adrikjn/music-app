@@ -38,7 +38,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="<?= BASE . "public/blog.php"; ?>">Blog</a>
                             <!-- voir exo blog -->
-                            <a class="dropdown-item" href="#">Contact</a>
+                            <a class="dropdown-item" href="<?= BASE . "public/contact.php"; ?>">Contact</a>
                             <!-- FOrmulaire de contact -->
                             <a class="dropdown-item" href="#">About us</a>
                             <!-- 0 php -->
