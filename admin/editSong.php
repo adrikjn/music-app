@@ -1,6 +1,7 @@
 <?php require_once('../include/header.php'); ?>
 <?php
 // ! Pas compris la partie ou l'on crée :  $id = $_GET['id'];  $artist = $_POST; 'id_artist' => $artist['id_artist'] <input type="hidden" name="id_artist" value="<?= $id ?? ""; 
+// ! $_SESSION
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $request = "SELECT * FROM artist WHERE id_artist = :id_artist";
@@ -14,7 +15,11 @@ if (!empty($_POST)) {
 
     foreach ($_POST as $indice => $input) {
         if (empty($input)) {
-            $error[$indice] = 'le champ ' . $indice . ' est obligatoire';
+            if($indice == 'image'){
+                $image = $_POST['old_img'];
+            }else {
+                $error[$indice] = 'le champ ' . $indice . ' est obligatoire';
+            }
         }
     }
 
@@ -23,9 +28,13 @@ if (!empty($_POST)) {
     if (!$error) {
         $request = "UPDATE artist SET artist = :artist, image = :image, song = :song, genre = :genre, lyrics = :lyrics WHERE id_artist = :id_artist";
 
+        if(!empty($_POST['image'])){
+            $image = $_POST['image'];
+        }
+
         $data = [
             'artist' => $_POST['artist'],
-            'image' => $_POST['image'],
+            'image' => $image,
             'song' => $_POST['song'],
             'genre' => $_POST['genre'],
             'lyrics' => $_POST['lyrics'],
@@ -43,6 +52,7 @@ if (!empty($_POST)) {
 
 <div class="container mt-3 border border-gray bg-light rounded shadow">
     <form method="post" class="p-3 text-center">
+        <input type="hidden" name="old_img" value="<?= $artist['image'] ?? ""; ?>">
         <input type="hidden" name="id_artist" value="<?= $id ?? ""; ?>">
         <div class="form-group p-1">
             <label for="artist" class="form-label">Artist name :</label>
