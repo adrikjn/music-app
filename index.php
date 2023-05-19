@@ -7,7 +7,7 @@ $resultat->execute();
 $artists = $resultat->fetchAll(PDO::FETCH_ASSOC);
 ?>
     
-    <h1 class="my-5 text-center">3 Latest Songs!</h1>
+    <h1 class="my-5 text-center">3  Latest Songs!</h1>
 
     
 <div class="container">
