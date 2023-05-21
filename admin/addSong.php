@@ -17,6 +17,9 @@
         if(empty($_POST['lyrics'])){
             $error['lyrics'] = 'Lyrics are required';
         }
+        if(strlen($_POST['artist']) < 3 || strlen($_POST['artist']) > 12){
+            $error['artist'] = 'Respect amount of chars';
+        }
         if(!$error){
             $request = "INSERT INTO artist (artist, image, song, genre,date, lyrics) VALUES(:artist, :image, :song, :genre, NOW(), :lyrics)";
             $data = [
