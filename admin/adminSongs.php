@@ -17,7 +17,6 @@ $artist = $resultat->fetchAll(PDO::FETCH_ASSOC);
                 <th scope="col">Song</th>
                 <th scope="col">Genre</th>
                 <th scope="col">Date</th>
-                <th scope="col">Lyrics</th>
                 <th scope="col">Options</th>
             </tr>
         </thead>
@@ -30,7 +29,6 @@ $artist = $resultat->fetchAll(PDO::FETCH_ASSOC);
                     <td><?= $a['song']; ?></td>
                     <td><?= $a['genre']; ?></td>
                     <td><?= $a['date']; ?></td>
-                    <td><?= $a['lyrics']; ?></td>
                     <td>
                         <a href="infoSong.php?id=<?= $a['id_artist']; ?>"><i class="fa-solid fa-eye text-info"></i></a>
                         <a href="editSong.php?id=<?= $a['id_artist']; ?>"><i class="fa-solid fa-pen-to-square text-success"></i></a>
